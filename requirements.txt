@@ -1,0 +1,7 @@
+warp-lang==1.16.0
+numpy>=2.0
+matplotlib>=3.10
+scipy>=1.15
+scikit-image>=0.25
+trimesh>=4.8
+pillow>=11.0
