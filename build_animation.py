@@ -1,4 +1,4 @@
-"""Combine report frames into a compact, portable GIF."""
+"""Combine simulation frames into a compact, portable GIF."""
 import argparse
 from pathlib import Path
 from PIL import Image

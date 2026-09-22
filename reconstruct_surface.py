@@ -56,7 +56,7 @@ def reconstruct(points, resolution=96):
 def render_water(mesh, filename):
     vertices = np.asarray(mesh.vertices)
     faces = np.asarray(mesh.faces)
-    # Keep the report render responsive for dense meshes.
+    # Keep surface rendering responsive for dense meshes.
     stride = max(1, len(faces) // 32000)
     display_faces = faces[::stride]
     triangles = vertices[display_faces][:, :, [0, 2, 1]]

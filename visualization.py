@@ -1,4 +1,4 @@
-"""Realtime point visualization, PLY serialization, and report snapshots."""
+"""Realtime point visualization, PLY serialization, and particle snapshots."""
 from pathlib import Path
 
 import numpy as np

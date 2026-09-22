@@ -30,7 +30,7 @@ outputs/
 *.gif
 *.mp4
 *.log
-# Original documents and archives
+# Documents and compressed files
 *.pdf
 *.doc
 *.docx
@@ -40,7 +40,6 @@ outputs/
 *.tgz
 *.7z
 *.rar
-private-project-archives/
 archive/
 # Credentials and local configuration
 .env

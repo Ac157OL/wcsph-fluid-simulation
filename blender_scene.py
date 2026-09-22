@@ -1,4 +1,4 @@
-"""Build and render the Task-4 scene in Blender.
+"""Build and render a fluid surface scene in Blender.
 
 Run with:
     blender -b --python blender_scene.py -- \
@@ -137,7 +137,7 @@ def main():
     world.node_tree.nodes["Background"].inputs["Color"].default_value = (0.004, 0.008, 0.018, 1.0)
     world.node_tree.nodes["Background"].inputs["Strength"].default_value = 0.12
     scene.world = world
-    scene["task"] = "A-test Task 4: SPH surface reconstruction and water rendering"
+    scene["description"] = "SPH surface reconstruction and water rendering"
     scene["source_ply"] = str(source)
     scene["source_point_cloud_ply"] = str(point_cloud)
     scene["reconstruction"] = "Gaussian implicit field + Marching Cubes"
@@ -148,7 +148,7 @@ def main():
     cloud = import_ply(point_cloud)
     cloud.name = "WCSPH_Source_PointCloud_784"
     cloud.rotation_euler.x = math.radians(90.0)
-    cloud["role"] = "Task 4 source point cloud imported from fluid_final.ply"
+    cloud["role"] = "Source particle point cloud"
     cloud["particle_count"] = len(cloud.data.vertices)
     cloud_mat = material("Imported particle cyan", (0.01, 0.34, 0.8), metallic=0.05, roughness=0.22)
     add_point_display_modifier(cloud, cloud_mat)

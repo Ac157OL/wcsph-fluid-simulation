@@ -50,23 +50,7 @@ build_animation.py         PNG 帧合成 GIF
 reconstruct_surface.py     点云隐式场与 Marching Cubes 重建
 blender_scene.py           Blender 场景与水体渲染
 examples/sphere-impact.ply  784 个模拟粒子的 ASCII 示例点云
-scripts/check_privacy.py   上传前的纯文本与敏感信息检查
 requirements.txt           Python 依赖
 ```
 
-示例点云来自已有模拟结果，用于演示重建流程；它不表示重新验证后的数值基准。算法使用三次样条核、Tait 状态方程、密度下限、压力与黏性力以及半隐式 Euler 积分。文献依据为 Becker 与 Teschner 的 *Weakly Compressible SPH for Free Surface Flows*（SCA 2007）；仓库不附带论文原文。
-
-## 上传个人仓库
-
-仅上传本项目目录。原始报告、任务材料、压缩包、旧版本、二进制工程与完整结果已移出项目。清理说明见 [docs/ARCHIVING.md](docs/ARCHIVING.md)。
-
-```bash
-python scripts/check_privacy.py
-git init -b main
-git add .
-git diff --cached --stat
-```
-
-提交前检查 Git 作者姓名和邮箱；如果不希望公开个人邮箱，可使用托管平台提供的隐私邮箱。确认暂存内容后再提交并连接自己的远程仓库。本整理没有创建提交或配置远程地址。
-
-`.gitignore` 用于防止常见生成文件、凭据和本地配置被误提交；它不能清除已经提交到 Git 历史中的内容。隐私检查是启发式检查，不能保证识别所有敏感信息。尚未添加开源许可证；代码与第三方来源的授权需由项目所有者确认后再选择。
+示例点云包含球形流体撞击后的粒子位置，用于演示表面重建流程。算法使用三次样条核、Tait 状态方程、密度下限、压力与黏性力以及半隐式 Euler 积分。文献依据为 Becker 与 Teschner 的 *Weakly Compressible SPH for Free Surface Flows*（SCA 2007）。

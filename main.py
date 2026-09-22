@@ -37,7 +37,7 @@ def parse_args():
 
 def build_fluid(scene, config):
     if scene == "sphere":
-        # Task 3: a solid sphere, initially suspended above the pool floor.
+        # A solid sphere, initially suspended above the pool floor.
         return SphereData(span=config.partSize, center=vecxf([-1.0, 0.8, 0.0]), radius=1.15)
     return CubeData(span=config.partSize, dim=config.dim,
                     lb=vecxf([-2.0, -1.8, -1.2]), rt=vecxf([0.0, 0.2, 1.2]))
